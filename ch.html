@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous"
+/>
+    <link rel="icon" href="https://cdn.glitch.com/44b329a3-2132-4d40-9c2e-1ac4cfd5e9ef%2FE-LEARN-IMAGE.jpg?v=1619588824837" />
+    <title>ALL IN ONE TRADING </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothie/1.27.0/smoothie.min.js"></script>
+    <script type="text/javascript" src="smoothie.js"></script>
+
+    
+  <style>
+    /* Custom properties/variables  */
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #ce3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Base styles */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-white);
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+
+/* Welcome section */
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: #000;
+  background-image: linear-gradient(90deg,rgba(80,80,80,0.5),rgba(80,80,80,0.5)),url("https://cdn.glitch.com/44b329a3-2132-4d40-9c2e-1ac4cfd5e9ef%2FIT-IMAGE.jpg?v=1619589802067");
+    background-size:cover;
+  background-position:fixed;
+  color:#112233;
+      animation-name:blink;
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+  
+}
+    
+    body{
+      animation-name:welcome;
+  animation-duration:15s;
+  animation-iteration-count:infinite;
+      
+    }
+    
+    h3{
+      color:white;
+    }
+
+@keyframes welcome{
+  0%{
+    background-image: linear-gradient(90deg,rgba(80,80,80,0.5),rgba(80,80,80,0.5)),url("https://cdn.glitch.com/44b329a3-2132-4d40-9c2e-1ac4cfd5e9ef%2FIT-IMAGE.jpg?v=1619589802067");
+  }
+  25%{
+    background-image: linear-gradient(90deg,rgba(80,80,80,0.5),rgba(80,80,80,0.5)),url("https://cdn.glitch.com/44b329a3-2132-4d40-9c2e-1ac4cfd5e9ef%2FE-LEARN-IMAGE.jpg?v=1619588824837");
+
+  }
+  50%{
+    background-image: linear-gradient(90deg,rgba(80,80,80,0.5),rgba(80,80,80,0.5)),url("https://cdn.glitch.com/44b329a3-2132-4d40-9c2e-1ac4cfd5e9ef%2Fgaming-images.jpg?v=1619588846369");
+
+  }
+  75%{
+    background-image: linear-gradient(90deg,rgba(80,80,80,0.5),rgba(80,80,80,0.5)),url("https://cdn.glitch.com/44b329a3-2132-4d40-9c2e-1ac4cfd5e9ef%2FE-LEARN-IMAGE.jpg?v=1619588824837");
+
+  }
+  100%{
+     background-image: linear-gradient(90deg,rgba(80,80,80,0.5),rgba(80,80,80,0.5)),url("https://cdn.glitch.com/44b329a3-2132-4d40-9c2e-1ac4cfd5e9ef%2Fit2.jpg?v=1619590726800");
+
+  }
+}
+    a{
+      color:white;
+      
+      animation-name:blink;
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+      
+    }
+   @keyframes blink{
+     50%{
+       color:gray;
+     }
+    }
+    </style>
+  
+  
+  </head>
+  <body>
+
+    <h1 class="welcome-section">ALL IN ONE TRADING PLATFORM </h1>
+
+    <canvas id="mycanvas" width="1365" height="390"></canvas>
+
+    <script type="text/javascript">
+
+      // Random data
+      var line1 = new TimeSeries();
+      var line2 = new TimeSeries();
+      setInterval(function() {
+        line1.append(new Date().getTime(), Math.random());
+        line2.append(new Date().getTime(), Math.random());
+      }, 1000);
+
+      var smoothie = new SmoothieChart({ grid: { strokeStyle: 'rgb(125, 0, 0)', fillStyle: 'rgb(60, 0, 0)', lineWidth: 1, millisPerLine: 250, verticalSections: 6 } });
+      smoothie.addTimeSeries(line1, { strokeStyle: 'rgb(0, 255, 0)', fillStyle: 'rgba(0, 255, 0, 0.4)', lineWidth: 3 });
+      smoothie.addTimeSeries(line2, { strokeStyle: 'rgb(255, 0, 255)', fillStyle: 'rgba(255, 0, 255, 0.3)', lineWidth: 3 });
+
+      smoothie.streamTo(document.getElementById("mycanvas"), 1000);
+    </script>
+    <style>
+      button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+        color:white;
+        font-size:1.8rem;
+        margin-left:25%;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 10vh;
+  background-color: #000;
+  background-image: linear-gradient(90deg,rgba(80,80,80,0.9),rgba(80,80,80,0.9)),url("https://cdn.glitch.com/44b329a3-2132-4d40-9c2e-1ac4cfd5e9ef%2FIT-IMAGE.jpg?v=1619589802067");
+    background-size:cover;
+  
+}</style>
+<button>
+  BET HIGH
+    </button>
+    <button>
+      BET LOW
+    </button>
+    <h3><a href="/">Return back</a></h3>
+  
+  </body>
+</html>
