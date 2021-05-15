@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothie/1.27.0/smoothie.min.js"></script>
+  
+  
+    <link rel="icon" href="https://cdn.glitch.com/44b329a3-2132-4d40-9c2e-1ac4cfd5e9ef%2FE-LEARN-IMAGE.jpg?v=1619588824837" />
+    <title>ALL IN ONE TRADING </title>
+    
+     
+  <style>
+    body{
+    background-color:black;
+    </style>
+
+  </head>
+  <body>
+
+  <canvas id="mycanvas" width="1350" height="600"></canvas>
+  <script>
+
+  var smoothie = new SmoothieChart();
+smoothie.streamTo(document.getElementById("mycanvas"));
+    
+    var line1 = new TimeSeries();
+var line2 = new TimeSeries();
+
+// Add a random value to each line every second
+setInterval(function() {
+  line1.append(new Date().getTime(), Math.random());
+  line2.append(new Date().getTime(), Math.random());
+}, 1000);
+
+// Add to SmoothieChart
+smoothie.addTimeSeries(line1);
+smoothie.addTimeSeries(line2);
+     smoothie.streamTo(document.getElementById("mycanvas"), 1000 /*delay*/); 
+    
+    
+  </script>
+  </body>
+</html>
